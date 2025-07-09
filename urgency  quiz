@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Surviving. Start Commanding. - The First Things First Protocol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+        }
+        .hero-bg {
+            background-color: #0a0a0a;
+            background-image: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,1) 100%), url('https://images.unsplash.com/photo-1589792947814-de09c154a634?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .font-black {
+            font-weight: 900;
+        }
+        .text-gold {
+            color: #FFD700;
+        }
+        .bg-gold {
+            background-color: #FFD700;
+        }
+        .bg-gold:hover {
+            background-color: #e6c300;
+        }
+        .section-box {
+            background-color: #111111;
+            border: 1px solid #2d2d2d;
+        }
+        .details-marker::before {
+            content: '+';
+            font-size: 1.5em;
+            font-weight: 900;
+            margin-right: 15px;
+            transition: transform 0.3s ease-in-out;
+            display: inline-block;
+        }
+        details[open] .details-marker::before {
+            transform: rotate(45deg);
+        }
+        summary {
+            list-style: none;
+            cursor: pointer;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        .scale-input {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 2px solid #4a4a4a;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+        .scale-input:checked {
+            background-color: #FFD700;
+            border-color: #FFD700;
+        }
+        input:checked + .scale-label {
+            color: #FFD700;
+            font-weight: 700;
+        }
+        #results-modal {
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="text-slate-200">
+
+    <!-- HERO SECTION -->
+    <div class="hero-bg">
+        <div class="w-full max-w-5xl mx-auto px-4 py-20 sm:py-32 text-center">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black text-white uppercase tracking-wider">
+                Another Day <span class="text-gold">Gone.</span> What Did You <span class="text-gold">Conquer?</span>
+            </h1>
+            <p class="mt-6 max-w-3xl mx-auto text-lg sm:text-xl text-slate-300">
+                Or did the day conquer you? Dragged from one fire to the next, chasing the urgent, while the important—your mission, your legacy, your life—gathers dust. The clock is ticking. You're losing time you can never get back.
+            </p>
+        </div>
+    </div>
+    
+    <div class="bg-black py-16 sm:py-24">
+        <div class="w-full max-w-4xl mx-auto px-4">
+
+            <!-- QUIZ SECTION -->
+            <div id="quiz-section" class="section-box p-6 sm:p-10 rounded-2xl shadow-lg text-center">
+                <h2 class="text-3xl sm:text-4xl font-black text-white uppercase mb-4">Are You Addicted to <span class="text-gold">Urgency?</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto mb-8">
+                    That rush from handling a crisis? It's a drug. It feels like progress, but it's the enemy of your potential. It keeps you busy, not effective. It's time for a brutally honest assessment. Take the quiz. Confront the truth.
+                </p>
+                 <form id="urgencyQuiz">
+                    <div class="space-y-8 text-left">
+                        <!-- Questions will be injected here -->
+                    </div>
+                    <div class="mt-10">
+                        <button type="submit" class="w-full sm:w-auto bg-gold hover:bg-gold-dark text-black font-bold uppercase py-4 px-12 rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-300">
+                            Reveal My Score
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- THE PROTOCOL SECTION -->
+            <div id="protocol-section" class="section-box p-6 sm:p-10 rounded-2xl shadow-lg mt-16">
+                <div class="text-center">
+                    <h2 class="text-3xl sm:text-5xl font-black text-white uppercase"><span class="text-gold">The First Things First</span> Protocol</h2>
+                    <p class="mt-4 text-lg text-slate-300 max-w-3xl mx-auto">This isn't time management. That's for amateurs. This is <span class="font-bold text-white">Life Leadership.</span></p>
+                    <p class="mt-2 text-slate-400 max-w-3xl mx-auto">It's a strategic intervention for ambitious professionals who are tired of playing defense. It's for those who know they were meant to command their lives, not just survive the day. This protocol is the weapon to close the gap between the life you have and the one you were born to live. Permanently.</p>
+                </div>
+
+                <div class="mt-12 space-y-6">
+                    <!-- Module 1 -->
+                    <details class="bg-black/30 rounded-lg">
+                        <summary class="p-5 text-xl font-bold flex items-center">
+                            <span class="details-marker text-gold"></span>
+                            Module 1: The Honest Assessment
+                        </summary>
+                        <div class="p-6 border-t border-slate-700 text-slate-300">
+                            <p class="font-bold text-white">Mission: Recon & Confront.</p>
+                            <p>Before you can win the war, you must see the battlefield clearly. We conduct a no-BS reconnaissance of your life. Where is your time, your energy, your focus *really* going? We identify the enemy: the "Urgency Addiction" that's sabotaging your mission. You will gain absolute, undeniable clarity on the key activities that will actually move the needle.</p>
+                        </div>
+                    </details>
+
+                    <!-- Module 2 -->
+                    <details class="bg-black/30 rounded-lg">
+                        <summary class="p-5 text-xl font-bold flex items-center">
+                            <span class="details-marker text-gold"></span>
+                            Module 2: The Compass & The Mission
+                        </summary>
+                        <div class="p-6 border-t border-slate-700 text-slate-300">
+                            <p class="font-bold text-white">Mission: Forge Your True North.</p>
+                            <p>You can't navigate a jungle without a compass. We will forge your personal constitution, your non-negotiable mission statement. This becomes your internal GPS, the filter through which every decision, every request, every "urgent" fire is passed. It's the source code for your integrity and the blueprint for your legacy.</p>
+                        </div>
+                    </details>
+
+                    <!-- Module 3 -->
+                    <details class="bg-black/30 rounded-lg">
+                        <summary class="p-5 text-xl font-bold flex items-center">
+                            <span class="details-marker text-gold"></span>
+                            Module 3: The Battle Plan & Execution
+                        </summary>
+                        <div class="p-6 border-t border-slate-700 text-slate-300">
+                            <p class="font-bold text-white">Mission: Plan the Hunt. Execute the Kill.</p>
+                            <p>A mission without a plan is a daydream. Here, we translate your compass into a concrete, weekly battle plan. You will learn to dominate the Time Management Matrix, ruthlessly eliminate low-value tasks, and master a 30-minute weekly protocol that ensures your "first things" are hunted down and accomplished. This is where you stop reacting and start executing with precision.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="mt-12 text-center">
+                     <a href="https://calendar.app.google/TPT7tiUe3GjVyorr5" target="_blank" rel="noopener noreferrer" class="inline-block bg-gold text-black font-bold uppercase py-4 px-16 rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-300 text-xl">
+                        Schedule Your Briefing
+                    </a>
+                    <p class="text-slate-500 mt-4 text-sm">Stop the bleed. Take command. Now.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div id="results-modal" class="fixed inset-0 hidden items-center justify-center p-4 z-50">
+        <div class="bg-[#111111] border border-gold w-full max-w-lg rounded-2xl shadow-2xl p-8 transform transition-all scale-95 opacity-0" id="modal-content">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center text-white mb-4" id="result-title"></h2>
+            <div class="text-center mb-6">
+                <p class="text-slate-400">Your Score:</p>
+                <p class="text-5xl font-bold text-gold" id="result-score"></p>
+            </div>
+            <p class="text-center text-slate-300 mb-8" id="result-description"></p>
+            <div class="bg-black/50 p-6 rounded-lg border border-slate-700 mt-8 text-center">
+                <h3 class="text-xl font-bold text-white">The Diagnosis is Clear. The Cure is Action.</h3>
+                <p class="text-slate-400 my-4">Your score shows you where you stand. Now, decide where you're going to go. Take the next step to master your time and command your priorities.</p>
+                <a href="https://calendar.app.google/TPT7tiUe3GjVyorr5" target="_blank" class="inline-block bg-gold text-black font-bold py-3 px-8 rounded-lg shadow-md transition-transform transform hover:scale-105 uppercase">
+                    Schedule Your Briefing Now
+                </a>
+            </div>
+            <div class="text-center mt-6">
+                <button id="close-modal" class="text-slate-500 hover:text-gold font-semibold">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Element References ---
+            const quizForm = document.getElementById('urgencyQuiz');
+            const quizContainer = quizForm.querySelector('.space-y-8');
+            const resultsModal = document.getElementById('results-modal');
+            const modalContent = document.getElementById('modal-content');
+            const closeModalBtn = document.getElementById('close-modal');
+            
+            const questions = [
+                "I seem to do my best work when I'm under pressure.",
+                "I often blame the rush and press of external things for my failure to spend deep, introspective time with myself.",
+                "I'm often frustrated by the slowness of people and things around me. I hate to wait or stand in line.",
+                "I feel guilty when I take time off work.",
+                "I always seem to be rushing between places and events.",
+                "I frequently find myself pushing people away so that I can finish a project.",
+                "I feel anxious when I'm out of touch with the office for more than a few minutes.",
+                "I'm often preoccupied with one thing when I'm doing something else.",
+                "I'm at my best when I'm handling a crisis situation.",
+                "The adrenaline rush from a new crisis seems more satisfying to me than the steady accomplishment of long-term results.",
+                "I often give up quality time with important people in my life to handle a crisis.",
+                "I assume people will naturally understand if I have to disappoint them or let things go in order to handle a crisis.",
+                "I rely on solving some crisis to give my day a sense of meaning and purpose.",
+                "I often eat lunch or other meals while I work.",
+                "I keep thinking that someday I'll be able to do what I really want to do.",
+                "A huge stack in my 'out' basket at the end of the day makes me feel like I've really been productive."
+            ];
+
+            // --- Populate Quiz with Questions ---
+            function populateQuiz() {
+                questions.forEach((q, index) => {
+                    const questionBlock = document.createElement('div');
+                    questionBlock.className = 'border border-slate-700 bg-black/20 p-5 rounded-lg';
+                    
+                    const questionText = `<p class="text-lg font-semibold text-slate-200 mb-4">${index + 1}. ${q}</p>`;
+                    
+                    const optionsHtml = `
+                        <div class="flex items-center justify-between sm:justify-around flex-wrap gap-y-3">
+                            ${[0, 1, 2, 3, 4].map(val => `
+                                <label class="flex flex-col items-center gap-1 cursor-pointer">
+                                    <input type="radio" name="question${index}" value="${val}" class="scale-input" required>
+                                    <span class="scale-label text-sm text-slate-400">${getLabelForValue(val)}</span>
+                                </label>
+                            `).join('')}
+                        </div>
+                    `;
+
+                    questionBlock.innerHTML = questionText + optionsHtml;
+                    quizContainer.appendChild(questionBlock);
+                });
+            }
+            
+            function getLabelForValue(value) {
+                switch(value) {
+                    case 0: return 'Never';
+                    case 1: return 'Rarely';
+                    case 2: return 'Sometimes';
+                    case 3: return 'Often';
+                    case 4: return 'Always';
+                    default: return '';
+                }
+            }
+
+            // --- Handle Quiz Submission ---
+            quizForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                
+                let totalScore = 0;
+                const formData = new FormData(quizForm);
+                if (Array.from(formData.keys()).length < questions.length) {
+                    // Replace alert with a more styled message if desired
+                    alert('You must answer all questions to get an accurate assessment.');
+                    return;
+                }
+
+                for (let value of formData.values()) {
+                    totalScore += parseInt(value, 10);
+                }
+                
+                displayResults(totalScore);
+            });
+
+            // --- Display Results in Modal ---
+            function displayResults(score) {
+                const resultScoreEl = document.getElementById('result-score');
+                const resultTitleEl = document.getElementById('result-title');
+                const resultDescriptionEl = document.getElementById('result-description');
+
+                resultScoreEl.textContent = score;
+
+                if (score <= 25) {
+                    resultTitleEl.textContent = "Low Urgency Mind-set";
+                    resultDescriptionEl.textContent = "Your score suggests the urgency paradigm is not a significant factor in your life. You have a healthy relationship with urgency and are likely able to focus on what's truly important.";
+                } else if (score <= 45) {
+                    resultTitleEl.textContent = "Strong Urgency Mind-set";
+                    resultDescriptionEl.textContent = "Your score suggests that urgency is a fundamental operational paradigm for you. You may often feel controlled by deadlines and external pressures, making it hard to focus on long-term goals.";
+                } else {
+                    resultTitleEl.textContent = "Urgency Addiction";
+                    resultDescriptionEl.textContent = "Your score indicates you may be addicted to urgency. Some people get so used to the adrenaline rush of handling crises that they become dependent on it for a sense of excitement and energy. While this can feel validating, it prevents you from addressing your most important, long-term priorities.";
+                }
+
+                showModal();
+            }
+            
+            // --- Modal Visibility ---
+            function showModal() {
+                resultsModal.classList.remove('hidden');
+                resultsModal.classList.add('flex');
+                setTimeout(() => {
+                    modalContent.classList.remove('scale-95', 'opacity-0');
+                    modalContent.classList.add('scale-100', 'opacity-100');
+                }, 50);
+            }
+
+            function hideModal() {
+                modalContent.classList.add('scale-95', 'opacity-0');
+                modalContent.classList.remove('scale-100', 'opacity-100');
+                setTimeout(() => {
+                    resultsModal.classList.add('hidden');
+                    resultsModal.classList.remove('flex');
+                }, 300);
+            }
+
+            closeModalBtn.addEventListener('click', hideModal);
+            resultsModal.addEventListener('click', function(e) {
+                if (e.target === resultsModal) {
+                    hideModal();
+                }
+            });
+            
+            // --- Initialize the Quiz ---
+            populateQuiz();
+        });
+    </script>
+
+</body>
+</html>
